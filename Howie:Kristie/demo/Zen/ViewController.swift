@@ -65,7 +65,10 @@ class ViewController: UIViewController {
     }
     
     let timeList = ["Good Morning", "Good Afternoon", "Good Evening", "Good Night"]
-    let punList = ["test1", "test2", "test3", "test4"]
+    let morningPuns = ["Have an egg-cellent day!", "Hope your day is egg-stra good!", "May your mornings be brew-tiful!", "What do sleepy eggs need in the morning? Eggspresso!", "A boiled egg in the morning ... is hard to beat!", "Be kind to yourself today", "Avo good day!", "Have a tea-rrific day!", "Hello beaut-tea-ful"]
+    let afternoonPuns = ["Chin up, friend. I be-leaf in you!", "Stay paw-sitive!", "It ain’t easy being purr-fect!", "Be like a pineapple: always wear your own crown.", "Donut give up", "Always remember, you’re someone’s raisin to smile", "Seas the day", "Kick some asparag-ass!", "You’re one in a melon", "Everything whale be alright", "You’re paw-some", "You are marble-ous!", "Just bee yourself. Do your own sting!", "You are dino-mite!"]
+    let eveningPuns = ["Suns down, puns down"]
+    let nightPuns = ["Sweet dreams", "Sleep well", "Don’t forget to recharge", "Self care isn’t shellfish", "잘자", "晚安"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,16 +86,16 @@ class ViewController: UIViewController {
         
         if (hour >= 21) {
             timeOfDay.text = timeList[3]
-            pun.text = punList[3]
+            pun.text = nightPuns[Int.random(in: 0..<nightPuns.count)]
         } else if (hour >= 17) {
             timeOfDay.text = timeList[2]
-            pun.text = punList[2]
+            pun.text = eveningPuns[Int.random(in: 0..<eveningPuns.count)]
         } else if (hour >= 12) {
             timeOfDay.text = timeList[1]
-            pun.text = punList[1]
+            pun.text = afternoonPuns[Int.random(in: 0..<afternoonPuns.count)]
         } else {
             timeOfDay.text = timeList[0]
-            pun.text = punList[0]
+            pun.text = morningPuns[Int.random(in: 0..<morningPuns.count)]
         }
     }
 
